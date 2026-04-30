@@ -1,0 +1,126 @@
+:root {
+  --background-color: #121212;
+  --maze-wall-color: #2a2a2a;
+  --maze-path-color: #1a1a1a;
+  --player-color: #ffdd00;
+  --enemy-color: #ff4d4d;
+  --projectile-color: #4dffff;
+  --exit-color: #4dff4d;
+  --start-color: #4d4dff;
+  --text-color: #ffffff;
+  --ui-background: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+#game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+#game-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  cursor: crosshair;
+}
+
+#ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#top-info {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--ui-background);
+  border-radius: 8px;
+}
+
+#lives-container {
+  display: flex;
+  align-items: center;
+}
+
+#lives {
+  display: flex;
+  margin-left: 8px;
+}
+
+.life {
+  width: 16px;
+  height: 16px;
+  background-color: var(--player-color);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+#timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#game-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  white-space: pre-line;
+}
+
+#game-summary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--ui-background);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  display: none;
+}
+
+#game-summary h2 {
+  margin-bottom: 16px;
+}
+
+#game-summary p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}

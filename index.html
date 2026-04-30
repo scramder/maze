@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Scape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="top-info">
+        <div id="lives-container">
+          <span>Lives: </span>
+          <div id="lives"></div>
+        </div>
+        <div id="timer"></div>
+        <div id="kills">Kills: 0</div>
+      </div>
+      <div id="game-message"></div>
+      <div id="game-summary"></div>
+    </div>
+  </div>
+  
+  <script src="js/utils.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/collision.js"></script>
+  <script src="js/maze.js"></script>
+  <script src="js/pathfinding.js"></script>
+  <script src="js/projectile.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
